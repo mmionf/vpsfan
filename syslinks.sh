@@ -1,17 +1,17 @@
 #!/bin/bash
 menu () {
-    echo "1. 安装 debian 10
+    echo "1. 安装 debian 12
     2. 安装debian 11
     3. 自定义镜像模式"
     }
-url='bash <(curl -s https://github.com/veip007/dd/raw/refs/heads/master/InstallNET.sh)'
+url='bash <(curl -s https://github.com/leitbogioro/Tools/raw/refs/heads/master/Linux_reinstall/InstallNET.sh)'
 slct () {
 case $nm in
     1)
-    $url -d 10 -p cnddyjj -console ttyS0        
+    $url -debian 12 -pwd cnddyjj -console ttyS0        
     ;;
     2)
-    $url -d 11 -p cnddyjj -console ttyS0
+    $url -debian 11 -pwd cnddyjj -console ttyS0
     ;;
     3)
     read -p '输入镜像链接直连地址：' url2
